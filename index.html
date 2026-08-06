@@ -6,10 +6,10 @@
 <title>Your Name · Astrophysicist</title>
 <meta name="description" content="Personal website of Your Name, an astrophysicist working on galaxy formation, dark matter and the chemical enrichment of the Universe.">
 
-<!-- Fonts: Fraunces (display serif), Inter (body), IBM Plex Mono (data/labels) -->
+<!-- Fonts: Inter (display & body), IBM Plex Mono (data/labels) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
   :root{
@@ -24,11 +24,11 @@
     --hero-1:   #090D18;
     --hero-2:   #151D34;
 
-    --display: "Fraunces", Georgia, serif;
+    --display: "Inter", system-ui, sans-serif;
     --body: "Inter", system-ui, sans-serif;
     --mono: "IBM Plex Mono", ui-monospace, monospace;
 
-    --wrap: 1080px;
+    --wrap: 1290px;
   }
 
   *{ box-sizing:border-box; }
@@ -91,10 +91,10 @@
   }
   #stars{ position:absolute; inset:0; pointer-events:none; }
   .hero .wrap{ position:relative; padding-top:88px; padding-bottom:92px; }
-  .hero .eyebrow{ color:#7FE3D8; }
+  .hero .eyebrow{ color:#7FE3D8; font-size:14px; font-family:var(--body); font-weight:500; }
   .hero h1{
     font-family:var(--display);
-    font-weight:500;
+    font-weight:800;
     font-size:clamp(2.3rem, 5.4vw, 4rem);
     line-height:1.06;
     letter-spacing:-.01em;
@@ -113,23 +113,20 @@
   .cta.ghost{ border:1px solid rgba(255,255,255,.35); color:#EBEDF5; }
   .cta.ghost:hover{ border-color:#fff; text-decoration:none; }
 
-  .icons{ display:flex; gap:20px; align-items:center; }
+  .icons{ display:flex; gap:34px; align-items:center; }
   .icons a{ color:#AEB4C4; display:inline-flex; }
   .icons a:hover{ color:#fff; }
-  .icons svg{ width:21px; height:21px; }
+  .icons svg{ width:36px; height:36px; }
+  .icons svg.ads-logo{ width:41px; height:auto; }
 
-  .hero-grid{ display:grid; grid-template-columns:1fr minmax(200px,290px); gap:54px; align-items:center; }
+  .hero-grid{ display:grid; grid-template-columns:1fr minmax(200px,460px); gap:32px; align-items:stretch; }
   .hero-photo{ display:flex; justify-content:center; }
   .avatar{
-    width:100%; max-width:270px; aspect-ratio:4/5; margin:0 auto;
-    border-radius:50%;                 /* oval crop — keeps its shape if you swap in an <img> */
-    border:1.5px dashed rgba(255,255,255,.42);
-    background:rgba(255,255,255,.05);
-    display:flex; flex-direction:column; align-items:center; justify-content:center;
-    gap:12px; color:#AEB4C4; object-fit:cover;
+    width:100%; height:100%; margin:0 auto;
+    border-radius:20px;
+    border:1.5px solid rgba(255,255,255,.18);
+    object-fit:cover;
   }
-  .avatar svg{ width:44px; height:44px; opacity:.75; }
-  .avatar span{ font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; }
 
   /* ---------- Sections ---------- */
   section.block{ padding:78px 0; scroll-margin-top:72px; }
@@ -212,7 +209,7 @@
 <!-- ============ NAV ============ -->
 <header class="nav">
   <div class="wrap nav-inner">
-    <a href="#top" class="brand">Your Name</a>
+    <a href="#top" class="brand">Thinh Huu Nguyen</a>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
     <nav class="nav-links">
       <a href="#research">Research</a>
@@ -229,12 +226,22 @@
   <canvas id="stars" aria-hidden="true"></canvas>
   <div class="wrap hero-grid">
     <div class="hero-text">
-    <span class="eyebrow">Astrophysicist · Ph.D. Candidate, Your University</span>
-    <h1>How galaxies assemble and enrich the Universe with heavy elements.</h1>
+    <span class="eyebrow">Astronomy Ph.D. Candidate<br>University of Illinois Urbana-Champaign<br>Galaxy Evolution, Cosmological Simulation, Theory</span>
+    <h1>Thịnh Hữu Nguyễn</h1>
     <p class="lede">
-      I use cosmological simulations and observations to trace how the first galaxies formed,
-      how dark matter shapes the smallest ones, and how their stars seeded the cosmos with the
-      chemical elements we measure today.
+      Hi! I am a fifth-year graduate student, Ph.D. candidate in Astronomy at the University of Illinois Urbana-Champaign.
+      I work with Professor Kirk Barrow to study galaxy evolution by using
+      hydrodyamics zoom-in cosmological simulations. 
+      I am particularly interested in galaxy mergers, particularly their dynamics and their effect
+      on star formation and morphology of galaxies. My works also focus on examining
+      different numerical models in cosmological simulations 
+      and their effect on the evolution of simulated galaxies. I love astronomy and nature not just
+      because of their complexity but also because of their beauty, so I am a bit of
+      a "romantic" scientist.
+      <br><br>
+      I really enjoy teaching and thrive to become a better educator. Seeing the "ah-ha moments" of
+      students is one of the best experiences for me. I love engaging in discussions with my students
+      and watching them master new knowledge.  
     </p>
     <div class="cta-row">
       <a href="#research" class="cta solid">Research</a>
@@ -243,28 +250,68 @@
     </div>
     <div class="icons">
       <!-- swap the href="#" values for your own links -->
-      <a href="mailto:you@university.edu" aria-label="Email" title="Email">
+      <a href="mailto:thinhhn2@illinois.edu" aria-label="Email" title="Email">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
       </a>
-      <a href="#" aria-label="NASA ADS" title="NASA ADS">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
+      <a href="https://orcid.org/0009-0002-2290-8039" aria-label="ORCID" title="ORCID" target="_blank" rel="noopener">
+        <svg viewBox="0 0 256 256"><path fill="#A6CE39" d="M256,128c0,70.7-57.3,128-128,128C57.3,256,0,198.7,0,128C0,57.3,57.3,0,128,0C198.7,0,256,57.3,256,128z"/><path fill="#FFFFFF" d="M86.3,186.2H70.9V79.1h15.4v48.4V186.2z"/><path fill="#FFFFFF" d="M108.9,79.1h41.6c39.6,0,57,28.3,57,53.6c0,27.5-21.5,53.6-56.8,53.6h-41.8V79.1z M124.3,172.4h24.5c34.9,0,42.9-26.5,42.9-39.7c0-21.5-13.7-39.7-43.7-39.7h-23.7V172.4z"/><path fill="#FFFFFF" d="M88.7,56.8c0,5.5-4.5,10.1-10.1,10.1c-5.6,0-10.1-4.6-10.1-10.1c0-5.6,4.5-10.1,10.1-10.1C84.2,46.7,88.7,51.3,88.7,56.8z"/></svg>
       </a>
-      <a href="#" aria-label="ORCID" title="ORCID">
-        <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><g fill="#151D34"><rect x="10.6" y="9.4" width="1.5" height="7"/><circle cx="11.35" cy="7.4" r="1"/><path d="M13.2 9.4h2.3a3.5 3.5 0 0 1 0 7h-2.3zm1.5 1.4v4.2h.8a2.1 2.1 0 0 0 0-4.2z"/></g></svg>
+      <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0009-0002-2290-8039&sort=date+desc" aria-label="NASA ADS" title="NASA ADS" target="_blank" rel="noopener">
+        <svg class="ads-logo" viewBox="0 0 1523 1259" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs>
+            <linearGradient x1="100%" y1="80.4645116%" x2="0%" y2="21.0140628%" id="adsGrad1">
+              <stop stop-color="#409FFF" offset="0%"></stop>
+              <stop stop-color="#2157CF" offset="100%"></stop>
+            </linearGradient>
+            <linearGradient x1="100%" y1="80.4645116%" x2="0%" y2="21.0140628%" id="adsGrad2">
+              <stop stop-color="#001CFF" stop-opacity="0" offset="0%"></stop>
+              <stop stop-color="#5AEAFF" stop-opacity="0.201341712" offset="100%"></stop>
+            </linearGradient>
+            <radialGradient cx="33.2232386%" cy="23.353294%" fx="33.2232386%" fy="23.353294%" r="100%" id="adsGrad3">
+              <stop stop-color="#FFFFFF" offset="0%"></stop>
+              <stop stop-color="#FFFFFF" offset="100%"></stop>
+            </radialGradient>
+          </defs>
+          <g fill="none" fill-rule="evenodd">
+            <g transform="translate(-290.000000, -225.000000)">
+              <g transform="translate(1200.761571, 843.546066) rotate(58.000000) translate(-1200.761571, -843.546066) translate(588.761571, 231.546066)">
+                <circle fill="#343434" cx="612" cy="612" r="612"></circle>
+                <path d="M97.4675032,502.245598 C147.948265,264.426676 359.137241,86 612,86 C902.501778,86 1138,321.498222 1138,612 C1138,841.52163 990.993249,1036.70799 786.000002,1108.53883 L786,1078.82667 C975.262473,1008.26065 1110.05664,825.885917 1110.05664,612.028321 C1110.05664,336.974874 887.081768,114 612.028321,114 C371.742781,114 171.202027,284.167657 124.342932,510.566096 C115.664481,507.182994 106.689407,504.392899 97.4675023,502.245603 Z M151.978026,867.257971 C213.761063,978.364635 314.628181,1064.74959 435.999997,1107.83346 L436,1078.05466 C324.452474,1035.89895 232.006579,954.842939 175.211285,851.435569 C167.868809,857.235152 160.106722,862.526946 151.978026,867.257971 Z" fill="#A5A5A5"></path>
+              </g>
+              <g transform="translate(1007.830629, 964.102699) rotate(58.000000) translate(-1007.830629, -964.102699) translate(415.830629, 146.602699)">
+                <circle fill="#9B9B9B" transform="translate(592.000000, 592.000000) rotate(-49.000000) translate(-592.000000, -592.000000) " cx="592" cy="592" r="419"></circle>
+                <circle fill="url(#adsGrad1)" transform="translate(597.029188, 595.029188) rotate(-49.000000) translate(-597.029188, -595.029188) " cx="597.029188" cy="595.029188" r="300.029188"></circle>
+                <circle fill="url(#adsGrad2)" transform="translate(597.000000, 595.000000) rotate(-49.000000) translate(-597.000000, -595.000000) " cx="597" cy="595" r="260"></circle>
+                <path d="M421.269577,1026.95919 L771.269577,1026.95919 L771.269577,1459.74099 C771.269577,1556.39527 692.91343,1634.74905 596.269577,1634.74905 L596.269577,1634.74905 C499.619746,1634.74905 421.269577,1556.3997 421.269577,1459.74099 L421.269577,1026.95919 Z" fill="#343434"></path>
+                <g transform="translate(602.360512, 1283.857398) rotate(-58.000000) translate(-602.360512, -1283.857398) translate(331.860512, 1055.857398)">
+                  <g transform="translate(270.510623, 212.084510) rotate(57.000000) translate(-270.510623, -212.084510) translate(196.510623, -61.915490)" fill="#9B9B9B">
+                    <rect transform="translate(74.000000, 68.437669) rotate(91.000000) translate(-74.000000, -68.437669) " x="7" y="32.9375896" width="134" height="71.0001594"></rect>
+                    <path d="M6.82121026e-13,286.830549 C6.82460455e-13,245.956578 6.82470721e-13,179.695562 6.82499482e-13,138.814747 L6.82290467e-13,154.640733 C6.82290467e-13,113.77171 33.1219425,80.6408217 74,80.6408217 L74,80.6408217 C114.869071,80.6408217 148,113.77349 148,154.640985 L148,97.2738046 C148,138.143017 148,204.412798 148,245.277373 L148,473.693758 C148,514.560061 114.878057,547.688745 74,547.688745 L74,547.688745 C33.1309285,547.688745 6.82121026e-13,514.556918 6.82121026e-13,473.681016 L6.82121026e-13,286.830549 Z"></path>
+                  </g>
+                  <g transform="translate(253.057093, 260.033496) rotate(53.000000) translate(-253.057093, -260.033496) translate(187.057093, 23.033496)" fill="#878787">
+                    <path d="M109.439012,4.7333754 C104.611865,3.74331792 99.6133473,3.22332122 94.4933838,3.22332122 C53.6153264,3.22332122 20.4933838,36.3542099 20.4933838,77.2232323 L20.4933838,61.3972465 C20.4933838,102.278061 20.4933838,168.539078 20.4933838,209.413048 L20.4933838,396.263515 C20.4933838,437.139417 53.6243124,470.271245 94.4933838,470.271245 C100.296077,470.271245 105.942484,469.603696 111.360048,468.341226 C77.65535,461.428491 52.3054286,431.598651 52.3054286,395.84348 L52.3054286,208.993013 C52.3054286,168.119042 52.3054286,101.858026 52.3054286,60.9772111 L52.3054286,76.8031969 C52.3054286,41.735497 76.6915012,12.3650079 109.439012,4.7333754 Z" transform="translate(65.926716, 236.747283) rotate(185.000000) translate(-65.926716, -236.747283) "></path>
+                  </g>
+                  <path d="M452.872371,63.9843924 L487.872371,63.9843924 L487.872371,149.364077 L452.872371,139.916627 L452.872371,63.9843924 Z" fill="#878787" transform="translate(470.372371, 106.674235) rotate(58.000000) translate(-470.372371, -106.674235) "></path>
+                </g>
+              </g>
+              <circle fill="#343434" cx="824.5" cy="432.5" r="207.494852"></circle>
+              <path d="M829.103362,570.206723 C906.480312,570.206723 969.206723,507.480312 969.206723,430.103362 C969.206723,352.726412 906.480312,290 829.103362,290 C751.726412,290 689,352.726412 689,430.103362 C689,507.480312 751.726412,570.206723 829.103362,570.206723 Z" fill="url(#adsGrad3)"></path>
+              <text font-family="Helvetica" font-size="700" font-weight="bold" fill="#FFFFFF">
+                <tspan x="1007" y="1030">a</tspan>
+              </text>
+              <path d="M1180.43685,956.804373 C1180.43685,838.403341 1113.26545,656.21252 1113.26545,656.21252 C1113.26545,656.21252 1253.06294,651.859749 1338.42335,721.654033 C1422.77443,790.623049 1452.8317,904.989096 1448.07887,974.117152 C1443.32603,1043.24521 1400.65926,1141.65206 1338.42335,1190.18651 C1242.2534,1265.1843 1123.10892,1254.06884 1123.10892,1254.06884 C1123.10892,1254.06884 1180.43685,1075.2054 1180.43685,956.804373 Z" fill-opacity="0.09" fill="#000000" transform="translate(1280.912495, 955.404464) rotate(52.000000) translate(-1280.912495, -955.404464) "></path>
+            </g>
+          </g>
+        </svg>
       </a>
-      <a href="#" aria-label="GitHub" title="GitHub">
+      <a href="https://github.com/thinhhuunguyen" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
       </a>
       </div>
     </div><!-- /hero-text -->
 
     <div class="hero-photo">
-      <!-- To use a real photo, replace this whole .avatar block with:
-           <img src="your-photo.jpg" alt="Your Name" class="avatar"> -->
-      <div class="avatar">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg>
-        <span>Your photo</span>
-      </div>
+      <img src="profile_picture.jpeg" alt="Thịnh Hữu Nguyễn" class="avatar">
     </div>
   </div>
 </section>
@@ -395,11 +442,11 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="brand-f">Your Name</div>
-        <p style="max-width:38ch;margin:0;font-size:14.5px;">Astrophysicist &amp; Ph.D. candidate, Department of Physics, Your University.</p>
+        <div class="brand-f">Thịnh Hữu Nguyễn</div>
+        <p style="max-width:38ch;margin:0;font-size:14.5px;">Astronomy Ph.D. candidate, Department of Astronomy, University of Illinois Urbana-Champaign.</p>
         <div class="foot-icons">
           <a href="mailto:you@university.edu" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
-          <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
+          <a href="https://github.com/thinhhuunguyen" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
         </div>
       </div>
       <div>
@@ -416,8 +463,8 @@
         <h4>Find me</h4>
         <ul>
           <li><a href="#">NASA ADS</a></li>
-          <li><a href="#">ORCID</a></li>
-          <li><a href="#">GitHub</a></li>
+          <li><a href="https://orcid.org/0009-0002-2290-8039" target="_blank" rel="noopener">ORCID</a></li>
+          <li><a href="https://github.com/thinhhuunguyen" target="_blank" rel="noopener">GitHub</a></li>
           <li><a href="#">arXiv</a></li>
         </ul>
       </div>
