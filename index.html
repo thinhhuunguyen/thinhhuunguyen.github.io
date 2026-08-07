@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Your Name · Astrophysicist</title>
-<meta name="description" content="Personal website of Your Name, an astrophysicist working on galaxy formation, dark matter and the chemical enrichment of the Universe.">
+<title>Thinh Huu Nguyen</title>
+<meta name="description" content="Personal website of Thinh Huu Nguyen, an astronomy Ph.D. candidate working on understanding galaxy evolution using cosmological simulations.">
 
 <!-- Fonts: Inter (display & body), IBM Plex Mono (data/labels) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,10 +86,18 @@
   /* ---------- Hero ---------- */
   .hero{
     position:relative; overflow:hidden;
-    background:radial-gradient(120% 130% at 78% 8%, #26325a 0%, var(--hero-2) 42%, var(--hero-1) 100%);
+    background-image:linear-gradient(100deg, rgba(6,8,16,.82) 0%, rgba(6,8,16,.6) 42%, rgba(6,8,16,.35) 65%, rgba(6,8,16,.55) 100%), url("hero_background.jpg");
+    background-size:cover, cover;
+    background-position:center, 58% 62%;
+    background-repeat:no-repeat, no-repeat;
     color:#EBEDF5;
   }
-  #stars{ position:absolute; inset:0; pointer-events:none; }
+  #stars{ display:none; }
+  .hero-credit{
+    position:absolute; right:14px; bottom:10px; z-index:2;
+    font-family:var(--mono); font-size:12px; letter-spacing:.04em;
+    color:rgba(235,237,245,.45);
+  }
   .hero .wrap{ position:relative; padding-top:88px; padding-bottom:92px; }
   .hero .eyebrow{ color:#7FE3D8; font-size:14px; font-family:var(--body); font-weight:500; }
   .hero h1{
@@ -138,17 +146,30 @@
   }
   .section-head p{ color:var(--ink-soft); margin:0; }
 
+  .teaching-list{ margin:28px 0 0; padding-left:22px; }
+  .teaching-list > li{ font-weight:500; margin-bottom:18px; color:#0A5A54; }
+  .teaching-list > li:last-child{ margin-bottom:0; }
+  .teaching-list ul{ margin:8px 0 0; padding-left:22px; font-weight:400; color:var(--ink-soft); font-size:.97rem; }
+  .teaching-list ul li{ margin-bottom:4px; }
+
   /* research theme cards */
   .themes{ display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
+  .themes.col-3{ grid-template-columns:repeat(3,1fr); }
   .card{
-    background:var(--paper); border:1px solid var(--line); border-radius:4px;
-    padding:26px 26px 24px; transition:border-color .2s, transform .2s;
+    display:block; background:var(--paper); border:1px solid var(--line); border-radius:4px;
+    padding:26px 26px 24px; transition:border-color .2s, transform .2s; color:inherit;
   }
   section.alt .card{ background:#fff; }
-  .card:hover{ border-color:var(--accent); transform:translateY(-2px); }
+  .card:hover{ border-color:var(--accent); transform:translateY(-2px); text-decoration:none; }
   .card .tag{ font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); }
   .card h3{ font-family:var(--display); font-weight:500; font-size:1.28rem; margin:.5em 0 .35em; line-height:1.2; }
+  #service .card h3{ color:#0A5A54; }
   .card p{ color:var(--ink-soft); font-size:.97rem; margin:0; }
+  .card-list{ margin:12px 0 0; padding-left:20px; color:var(--ink-soft); font-size:.97rem; }
+  .card-list li{ margin-bottom:4px; }
+  .card-list li:last-child{ margin-bottom:0; }
+  .card-img{ width:84%; border-radius:4px; margin:16px auto 0; border:1px solid var(--line); }
+  .card-img.full{ width:100%; }
 
   /* publications timeline */
   .pubs{ border-top:1px solid var(--line); }
@@ -214,9 +235,10 @@
     <nav class="nav-links">
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
       <a href="#service">Service &amp; Outreach</a>
-      <a href="#about">About</a>
-      <a href="Your_CV.pdf" class="cv-btn">CV</a>
+      <a href="#about">Contact</a>
+      <a href="https://uofi.box.com/s/87xeks175qg3nyh2j4u4l257kr6ufusz" target="_blank" rel="noopener" class="cv-btn">CV</a>
     </nav>
   </div>
 </header>
@@ -239,9 +261,8 @@
       because of their complexity but also because of their beauty, so I am a bit of
       a "romantic" scientist.
       <br><br>
-      I really enjoy teaching and thrive to become a better educator. Seeing the "ah-ha moments" of
-      students is one of the best experiences for me. I love engaging in discussions with my students
-      and watching them master new knowledge.  
+      My goal is to become a professor who can inspire students to appreciate the beauty of science and to become lifelong learners and thinkers.
+      I really enjoy teaching. Seeing the "ah-ha moments" of students is one of the best experiences for me. 
     </p>
     <div class="cta-row">
       <a href="#research" class="cta solid">Research</a>
@@ -304,6 +325,9 @@
           </g>
         </svg>
       </a>
+      <a href="https://scholar.google.com/citations?hl=en&user=pwovx0QAAAAJ&view_op=list_works&gmla=AO4B3jtPcaN4d3m4tEu44gHjg-GmCEu1CDMiPYu6o5CnFpYCI_bl3h38HxI4hYEuRvD9DpGK3fLogB1wXY4XOTkz" aria-label="Google Scholar" title="Google Scholar" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="#4285F4"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.24 14.978 9.5 12 9.5c-2.977 0-5.548 1.74-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+      </a>
       <a href="https://github.com/thinhhuunguyen" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
       </a>
@@ -314,37 +338,28 @@
       <img src="profile_picture.jpeg" alt="Thịnh Hữu Nguyễn" class="avatar">
     </div>
   </div>
+  <span class="hero-credit">Image Credit: Kent E. Biggs</span>
 </section>
 
 <!-- ============ RESEARCH ============ -->
 <section class="block" id="research">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Research</span>
-      <h2>What I work on</h2>
-      <p>A short framing sentence for your programme — the questions that connect these threads together.</p>
+      <h2>My Research</h2>
     </div>
     <div class="themes">
-      <div class="card">
-        <span class="tag">First galaxies</span>
-        <h3>The origin of the chemical elements</h3>
-        <p>How the earliest stars seeded the Universe with its first heavy elements, and how that signal survives in ancient stars today.</p>
-      </div>
-      <div class="card">
-        <span class="tag">Dark matter</span>
-        <h3>The smallest galaxies as laboratories</h3>
-        <p>Using the faintest dwarf galaxies to test the nature of dark matter on the smallest scales.</p>
-      </div>
-      <div class="card">
-        <span class="tag">Galactic archaeology</span>
-        <h3>Reconstructing the Milky Way</h3>
-        <p>Reading the fossil record of stellar populations to trace how our Galaxy assembled over cosmic time.</p>
-      </div>
-      <div class="card">
-        <span class="tag">Computation</span>
-        <h3>Simulations, statistics &amp; HPC</h3>
-        <p>Turning cosmological simulations into controlled, statistical experiments on supercomputers.</p>
-      </div>
+      <a class="card" href="https://academic.oup.com/mnras/article/545/3/staf2045/8329196" target="_blank" rel="noopener">
+        <span class="tag">Radiative Transfer</span>
+        <h3>The effect of H<sub>2</sub> self-shielding modeling</h3>
+        <p>How the modeling of H<sub>2</sub> self-shielding affects the properties of early galaxies (H<sub>2</sub> mass, star formation, CGM, reionization, etc.) in radiative hydrodynamic cosmological simulations.</p>
+        <img src="h2_mass_distribution.png" alt="H2 mass distribution" class="card-img">
+      </a>
+      <a class="card" href="https://arxiv.org/abs/2607.21709" target="_blank" rel="noopener">
+        <span class="tag">Galaxy Dynamics</span>
+        <h3>Galaxy merger as a testbed for stellar feedback subgrid models</h3>
+        <p>Comparative studies using nine robustly-calibrated simulation codes from the AGORA collaboration to evaluate how the effects of a major galaxy merger (star formation response and the remnant's morphology) differ with different hydrodynamic solvers and stellar feedback models.</p>
+        <img src="Gas_Project_MergerSequence_AllCodes_ver2013_ver5.png" alt="Galaxy merger sequence across simulation codes" class="card-img full">
+      </a>
     </div>
   </div>
 </section>
@@ -353,85 +368,132 @@
 <section class="block alt" id="publications">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Selected publications</span>
-      <h2>A few papers that capture the programme</h2>
+      <h2>Selected Publications</h2>
     </div>
     <div class="pubs">
       <div class="pub">
-        <div class="year">2025</div>
+        <div class="year">Aug 2026</div>
         <div>
-          <h3>An informative title for your most recent paper</h3>
-          <p>One sentence on why it matters, written for a colleague skimming the page.</p>
-          <div class="cite">Your Name et al. 2025, MNRAS, 000, 000 · arXiv:2500.00000</div>
+          <h3>The AGORA High-resolution Galaxy Simulations Comparison Project. IX - Part 2: Effects of a Major Galaxy Merger on the Stellar Morphology of a Milky Way-mass Galaxy Progenitor</h3>
+          <p>The stellar feedback type of a cosmological simulation influence the stellar morphology (compactness and disc formation) of a merger remnant.</p>
+          <div class="cite">Nguyễn et al. 2026, submitted to MNRAS, arXiv:2607.21710</div>
         </div>
       </div>
       <div class="pub">
-        <div class="year">2024</div>
+        <div class="year">Aug 2026</div>
         <div>
-          <h3>The paper you are proudest of</h3>
-          <p>A plain-language takeaway — the result, not the abstract.</p>
-          <div class="cite">Your Name et al. 2024, ApJ, 000, 000</div>
+          <h3>The AGORA High-resolution Galaxy Simulations Comparison Project. IX - Part 1: Effects of a Major Galaxy Merger on Star Formation of a Milky Way-mass Galaxy Progenitor</h3>
+          <p>The stellar feedback type of a cosmological simulation effects the merger-driven star formation response in a major galaxy merger.</p>
+          <div class="cite">Nguyễn et al. 2026, submitted to MNRAS, arXiv:2607.21709</div>
         </div>
       </div>
       <div class="pub">
-        <div class="year">2023</div>
+        <div class="year">Jan 2026</div>
         <div>
-          <h3>An earlier, foundational result</h3>
-          <p>What this established that the later work builds on.</p>
-          <div class="cite">Your Name et al. 2023, MNRAS, 000, 000</div>
+          <h3>Effect of molecular hydrogen self-shielding modelling on early Reionization Era galaxies in radiative hydrodynamic cosmological simulations</h3>
+          <p>Reveals noticeable differences in the simulated galaxies' properties between using the Sobolev-like density-gradient approximation and the adaptive ray-tracing method to model H<sub>2</sub> self-shielding</p>
+          <div class="cite">Nguyễn et al. 2026, MNRAS, 545, 3</div>
         </div>
       </div>
     </div>
     <div class="pubs-more">
       <a href="#" class="cta solid">Full publication list</a>
-      <a href="#" class="cta ghost" style="border-color:var(--line);color:var(--ink)">NASA ADS</a>
+      <a href="https://orcid.org/0009-0002-2290-8039" class="cta ghost" style="border-color:var(--line);color:var(--ink)" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0009-0002-2290-8039&sort=date+desc" class="cta ghost" style="border-color:var(--line);color:var(--ink)" target="_blank" rel="noopener">NASA ADS</a>
     </div>
   </div>
 </section>
 
-<!-- ============ SERVICE & OUTREACH ============ -->
-<section class="block" id="service">
+<!-- ============ TEACHING ============ -->
+<section class="block" id="teaching">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Service &amp; Outreach</span>
-      <h2>Beyond the research</h2>
-      <p>Editorial and community service, mentoring, and bringing astronomy to wider audiences.</p>
+      <h2>Teaching</h2>
     </div>
-    <div class="themes">
+    <p style="max-width:none">
+      I am passionate about teaching and am thriving to become a better educator.
+      I love engaging in discussions with my students and watching them master new knowledge.
+    </p>
+    <ul class="teaching-list">
+      <li>Graduate Teacher Certificate. UIUC Center for Innovation in Teaching & Learning.
+        <ul>
+          <li>Participated in a pre-semester teaching development program.</li>
+          <li>Taught a minimum of two semesters, had an observation of and reflected on teaching.</li>
+          <li>Used informal early feedback and end-of-semester feedback from your students for two semesters.</li>
+          <li>Participated in a minimum of six hours of teaching development workshops.</li>
+        </ul>
+      </li>
+      <li>TA Courses
+        <ul>
+          <li>ASTR 570 Cosmology. Spring 2026.</li>
+          <li>ASTR 210 Introduction to Astrophysics. Fall 2025.</li>
+          <li>ASTR 121 Solar System and Worlds Beyond. Spring 2023. Facilitating discussion sections.</li>
+          <li>ASTR 121 Solar System and Worlds Beyond. Fall 2022. Facilitating discussion sections.</li>
+        </ul>
+      </li>
+      <li>Course Design Series Workshop Participant. UIUC Center for Innovation in Teaching & Learning. Summer 2026.
+        <ul>
+          <li>Topics covered: (1) Overview of Backward Design, (2) Promoting Proactive Accessibility in the Classroom, 
+            (3) Co-constructing Humans with Learning Objectives, 
+            (4) Choosing Assessments that align with your objectives, 
+            (5) Learning Inside of Class, (6) Learning Outside of Class, 
+            (7) Writing a Syllabus that your students want to read, (8) What a syllabus is for?</li>
+        </ul>
+      </li>
+      <li>Physics Tutor of the Learners's Studio Peer Tutoring Service at Villanova University. Spring 2019 - Spring 2022.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SERVICE & OUTREACH ============ -->
+<section class="block alt" id="service">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Other Professional Activities</h2>
+    </div>
+    <div class="themes col-3">
       <div class="card">
-        <span class="tag">Peer review</span>
-        <h3>Refereeing &amp; community service</h3>
-        <p>Referee for [journals], and [any editorial board, committee, or society roles you hold].</p>
+        <h3>Fellowships &amp; Awards</h3>
+        <ul class="card-list">
+          <li>Graduate Student First Author Publication Award. UIUC Astronomy Department. Spring 2026.</li>
+          <li>Center for AstroPhysical Surveys (CAPS) Graduate Fellowship. University of Illinois National Center for Supercomputing Applications (NCSA). 2024 - 2025.</li>
+          <li>Graduate College Conference Award. UIUC Astronomy Department. Spring 2024.</li>
+        </ul>
       </div>
       <div class="card">
-        <span class="tag">Mentoring</span>
-        <h3>Students &amp; teaching</h3>
-        <p>Supervising [n] undergraduate / master's projects; teaching assistant for [courses].</p>
+        <h3>Engagement &amp; Outreach</h3>
+        <ul class="card-list">
+          <li>Volunteer, Astronomy activities at STEM Night at Yankee Ridge Elementary, Urbana, IL. 2025-2026</li>
+          <li>Guest Speaker, "Ask an Astronomer" Event at the UIUC Observatory Open House. 2025</li>
+          <li>Volunteer, Southside Elementary School’s Walkathon, 2024</li>
+          <li>UIUC Astronomy Volunteer Team, Solar Eclipse Day at Marion, Illinois, 2024</li>
+        </ul>
       </div>
       <div class="card">
-        <span class="tag">Public engagement</span>
-        <h3>Talks &amp; outreach</h3>
-        <p>Public lectures, school visits, and science communication such as [examples].</p>
-      </div>
-      <div class="card">
-        <span class="tag">Organising</span>
-        <h3>Seminars &amp; equity work</h3>
-        <p>Co-organiser of [seminar series / session / workshop], and [any EDI initiatives].</p>
+        <h3>Refereeing &amp; Service</h3>
+        <ul class="card-list">
+          <li>Peer-review Journal Referee: ApJ</li>
+          <li>Organizer, UIUC's Galaxy Journal Club</li>
+          <li>Local Organizing Committee, The End of Star Formation Conference. March 2026.</li>
+          <li>Organizer, UIUC's Astronomy Journal Club. 2022-2026.</li>
+          <li>Organizer, UIUC's Astronomy Department Prospective Graduate Student Day. 2024-2026.</li>
+          <li>Panelist, How to Get Into Grad Schools Panel at UIUC Astrofest. 2025</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ ABOUT ============ -->
-<section class="block alt" id="about">
+<section class="block" id="about">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">About</span>
       <h2>A little more</h2>
       <p>
-        Two or three sentences on your background, current position, and what you are looking for
-        (collaborations, postdoc positions, students). Keep it human. Reach me at
-        <a href="mailto:you@university.edu">you@university.edu</a>.
+        I am Vietnamese and I call the vibrant and loving city of Ho Chi Minh City home 🇻🇳.
+        Outside of research, I enjoy traveling, hiking, photography, going to museums, and trying new restaurants/cuisines.
+        If you are interested in my research, collaborating, or simply just want to chat about anything on my profile, feel free to reach me at
+        <a href="mailto:thinhhn2@illinois.edu">thinhhn2@illinois.edu</a>.
       </p>
     </div>
   </div>
@@ -443,9 +505,9 @@
     <div class="foot-grid">
       <div>
         <div class="brand-f">Thịnh Hữu Nguyễn</div>
-        <p style="max-width:38ch;margin:0;font-size:14.5px;">Astronomy Ph.D. candidate, Department of Astronomy, University of Illinois Urbana-Champaign.</p>
+        <p style="max-width:38ch;margin:0;font-size:14.5px;">Astronomy Ph.D. candidate<br>Department of Astronomy, University of Illinois Urbana-Champaign.</p>
         <div class="foot-icons">
-          <a href="mailto:you@university.edu" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+          <a href="mailto:thinhhn2@illinois.edu" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
           <a href="https://github.com/thinhhuunguyen" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
         </div>
       </div>
@@ -454,22 +516,22 @@
         <ul>
           <li><a href="#research">Research</a></li>
           <li><a href="#publications">Publications</a></li>
+          <li><a href="#teaching">Teaching</a></li>
           <li><a href="#service">Service &amp; Outreach</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="Your_CV.pdf">CV</a></li>
+          <li><a href="#about">Contact</a></li>
+          <li><a href="https://uofi.box.com/s/87xeks175qg3nyh2j4u4l257kr6ufusz" target="_blank" rel="noopener">CV</a></li>
         </ul>
       </div>
       <div>
         <h4>Find me</h4>
         <ul>
-          <li><a href="#">NASA ADS</a></li>
+          <li><a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0009-0002-2290-8039&sort=date+desc" target="_blank" rel="noopener">NASA ADS</a></li>
           <li><a href="https://orcid.org/0009-0002-2290-8039" target="_blank" rel="noopener">ORCID</a></li>
           <li><a href="https://github.com/thinhhuunguyen" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="#">arXiv</a></li>
         </ul>
       </div>
     </div>
-    <div class="copyright">© <span id="yr"></span> Your Name · Built with GitHub Pages</div>
+    <div class="copyright">© <span id="yr"></span> Thinh Huu Nguyen · Built with GitHub Pages</div>
   </div>
 </footer>
 
