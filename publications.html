@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publications · Thinh Huu Nguyen</title>
+<meta name="description" content="Full publication list of Thinh Huu Nguyen, an astronomy Ph.D. candidate working on understanding galaxy evolution using cosmological simulations.">
+
+<!-- Fonts: Inter (display & body), IBM Plex Mono (data/labels) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  @view-transition{ navigation:auto; }
+  ::view-transition-old(root),
+  ::view-transition-new(root){ animation-duration:.9s; }
+
+  :root{
+    --paper:    #FAFAFB;
+    --paper-2:  #F1F2F6;
+    --ink:      #16181F;
+    --ink-soft: #494D59;
+    --ink-faint:#8A8E9A;
+    --line:     #E4E5EB;
+    --accent:   #0E7C74;
+    --accent-d: #0A5A54;
+    --hero-1:   #090D18;
+    --hero-2:   #151D34;
+
+    --display: "Inter", system-ui, sans-serif;
+    --body: "Inter", system-ui, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, monospace;
+
+    --wrap: 1290px;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ color:var(--accent); text-decoration:none; }
+  a:hover{ color:var(--accent-d); text-decoration:underline; text-underline-offset:3px; }
+
+  .wrap{ width:100%; max-width:var(--wrap); margin:0 auto; padding:0 28px; }
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--accent);
+  }
+
+  /* ---------- Nav ---------- */
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(250,250,251,.86);
+    backdrop-filter:saturate(1.4) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{ display:flex; align-items:center; justify-content:space-between; height:64px; }
+  .brand{ font-family:var(--display); font-weight:600; font-size:19px; color:var(--ink); letter-spacing:.01em; }
+  .brand:hover{ text-decoration:none; }
+  .back-link{ font-size:14.5px; color:var(--ink-soft); font-weight:500; }
+  .back-link:hover{ color:var(--ink); text-decoration:none; }
+
+  /* ---------- Page header ---------- */
+  .page-head{ padding:64px 0 12px; }
+  .page-head h1{
+    font-family:var(--display); font-weight:800; font-size:clamp(1.9rem,4vw,2.7rem);
+    line-height:1.1; margin:.4em 0 0; letter-spacing:-.01em;
+  }
+  .page-head p{ color:var(--ink-soft); margin:1em 0 0; }
+
+  /* ---------- numbered publication list ---------- */
+  .pubs-section{ padding:30px 0 88px; }
+  .pub-list{
+    list-style:none; counter-reset:pub; margin:0; padding:0;
+    border-top:1px solid var(--line);
+  }
+  .pub-list li{
+    counter-increment:pub;
+    padding:22px 0; border-bottom:1px solid var(--line);
+    font-size:1rem; line-height:1.6; color:var(--ink-soft);
+  }
+  .pub-list .pub-num{
+    font-family:var(--mono); font-weight:500; color:var(--accent);
+  }
+  .pub-list .pub-num::before{ content:"[" counter(pub) "] "; }
+  .pub-list .pub-num:hover{ color:var(--accent-d); }
+  .pub-list .title{ color:var(--ink); font-weight:600; }
+  .pubs-more{ margin-top:34px; display:flex; gap:22px; flex-wrap:wrap; }
+  .cta{
+    font-size:14.5px; font-weight:500; padding:11px 22px; border-radius:999px;
+    border:1px solid var(--line); color:var(--ink);
+  }
+  .cta:hover{ border-color:var(--accent); color:var(--accent); text-decoration:none; }
+
+  /* ---------- Footer ---------- */
+  footer{ background:var(--hero-1); color:#AEB4C4; padding:40px 0; }
+  footer a{ color:#C4C9D6; }
+  footer a:hover{ color:#fff; }
+  .copyright{ font-family:var(--mono); font-size:12px; color:#6B7186; }
+
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:2px; border-radius:2px; }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html#top" class="brand">Thinh Huu Nguyen</a>
+    <a href="index.html#publications" class="back-link">← Back to Home</a>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <h1>Full Publication List</h1>
+    <p>The publications are listed in reverse chronological order by publication/submission date. Click the entry number to view the full paper.</p>
+  </div>
+</div>
+
+<section class="pubs-section">
+  <div class="wrap">
+    <ol class="pub-list">
+      <li><a class="pub-num" href="https://doi.org/10.48550/arxiv.2607.21710" target="_blank" rel="noopener"></a><span class="title">The AGORA High-resolution Galaxy Simulations Comparison Project. IX - Part 2: Effects of a Major Galaxy Merger on the Stellar Morphology of a Milky Way-mass Galaxy Progenitor.</span> Nguyễn et al. August 2026. Submitted to MNRAS, arXiv:2607.21710.</li>
+      <li><a class="pub-num" href="https://doi.org/10.48550/arxiv.2607.21709" target="_blank" rel="noopener"></a><span class="title">The AGORA High-resolution Galaxy Simulations Comparison Project. IX - Part 1: Effects of a Major Galaxy Merger on Star Formation of a Milky Way-mass Galaxy Progenitor.</span> Nguyễn et al. August 2026. Submitted to MNRAS, arXiv:2607.21709.</li>
+      <li><a class="pub-num" href="https://doi.org/10.1093/mnras/staf2045" target="_blank" rel="noopener"></a><span class="title">Effect of molecular hydrogen self-shielding modelling on early Reionization Era galaxies in radiative hydrodynamic cosmological simulations.</span> Nguyễn et al. January 2026. MNRAS, 545, 3.</li>
+    </ol>
+    <div class="pubs-more">
+      <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0009-0002-2290-8039&sort=date+desc" class="cta" target="_blank" rel="noopener">View on NASA ADS</a>
+      <a href="https://orcid.org/0009-0002-2290-8039" class="cta" target="_blank" rel="noopener">View on ORCID</a>
+      <a href="https://scholar.google.com/citations?hl=en&user=pwovx0QAAAAJ&view_op=list_works&gmla=AO4B3jtPcaN4d3m4tEu44gHjg-GmCEu1CDMiPYu6o5CnFpYCI_bl3h38HxI4hYEuRvD9DpGK3fLogB1wXY4XOTkz" class="cta" target="_blank" rel="noopener">View on Google Scholar</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="copyright">© <span id="yr"></span> Thinh Huu Nguyen · Built with GitHub Pages</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
