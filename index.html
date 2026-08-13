@@ -12,6 +12,10 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+  @view-transition{ navigation:auto; }
+  ::view-transition-old(root),
+  ::view-transition-new(root){ animation-duration:.2s; }
+
   :root{
     --paper:    #FAFAFB;
     --paper-2:  #F1F2F6;
@@ -397,7 +401,7 @@
       </div>
     </div>
     <div class="pubs-more">
-      <a href="#" class="cta solid">Full publication list</a>
+      <a href="publications.html" class="cta solid">Full publication list</a>
       <a href="https://orcid.org/0009-0002-2290-8039" class="cta ghost" style="border-color:var(--line);color:var(--ink)" target="_blank" rel="noopener">ORCID</a>
       <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0009-0002-2290-8039&sort=date+desc" class="cta ghost" style="border-color:var(--line);color:var(--ink)" target="_blank" rel="noopener">NASA ADS</a>
     </div>
